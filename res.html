@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration</title>
+      <link rel="stylesheet" href="styles.css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+            (function () {
+                  emailjs.init({
+                        publicKey: "DL6duqzsd0sC13_1R",
+                  });
+            })();
+      </script>
+</head>
+
+<body>
+      <div class="container">
+            <h1>Registration</h1>
+            <form id="registration-form">
+                  <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                  </div>
+                  <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                  </div>
+                  <div class="form-group">
+                        <label for="plan">Membership Plan</label>
+                        <select id="plan" name="plan" required>
+                              <option value="basic">Basic Plan - ₹1500/month</option>
+                              <option value="premium">Premium Plan - ₹2500/month</option>
+                              <option value="vip">VIP Plan - ₹4000/month</option>
+                        </select>
+                  </div>
+                  <button type="submit" class="submit-btn">Submit</button>
+            </form>
+      </div>
+
+      <div id="plans" class="plans-section">
+            <h2>Our Membership Plans</h2>
+            <div class="plan" id="basic">
+                  <h3>Basic Plan</h3>
+                  <p>₹1500/month</p>
+                  <ul>
+                        <li>1 times consultation to psychiatrists</li>
+                        <li>every sunday Personal Training </li>
+                  </ul>
+            </div>
+            <div class="plan" id="premium">
+                  <h3>Premium Plan</h3>
+                  <p>₹2500/month</p>
+                  <ul>
+                        <li>3 times consultation to psychiatrists</li>
+                        <li>every saturarday and sunday personal traning</li>
+                        <li>Free fitness classes</li>
+                  </ul>
+            </div>
+            <div class="plan" id="vip">
+                  <h3>VIP Plan</h3>
+                  <p>₹4000/month</p>
+                  <ul>
+                        <li>Access to gym facilities</li>
+                        <li>every alternate sunday and monday personal traning</li>
+                        <li>Free  fitness classes</li>
+                        <li>mind relaxing therapy</li>
+                  </ul>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            document.getElementById("registration-form").addEventListener("submit", function (event) {
+                  event.preventDefault();
+
+                  // Get form data
+                  const name = document.getElementById("name").value;
+                  const email = document.getElementById("email").value;
+                  const phone = document.getElementById("phone").value;
+                  const dob = document.getElementById("dob").value;
+                  const plan = document.getElementById("plan").value;
+
+                  // Create the email message
+                  const message = `
+                        Name: ${name}
+                        Email: ${email}
+                        Phone: ${phone}
+                        Date of Birth: ${dob}
+                        Membership Plan: ${plan}
+                  `;
+
+                  // Send the email using EmailJS
+                  emailjs.send("service_6356mh7", "template_76pl94c", {
+                        user_name: name,
+                        user_email: email,
+                        message: message,
+                        user_phone: phone,
+                        user_dob: dob,
+                        user_plan: plan,
+                        subject: `Gym Registration Confirmation for ${name}`
+                  })
+
+                        .then(function (response) {
+                              console.log("Success", response);
+                              alert("Registration successful! A confirmation email has been sent.");
+                        }, function (error) {
+                              console.log("Error", error);
+                              alert("There was an error sending your email.");
+                        });
+            });
+      </script>
+</body>
+
+</html>

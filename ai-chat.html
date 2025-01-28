@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="DOCTOR.CSS">
+  <SCript:src></SCript:src>
+  <script type="text/javascript">
+    
+    
+    (function () {
+      emailjs.init("VL6_mDmjBQY3S9JNQ"); // Ensure the public key is initialized properly
+    })();
+  </script>
+  <style>
+    /* Add some simple styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      background-image: url('C:\Users\tusha\OneDrive\Desktop\website\therapy-session-scene_107791-27206.avif');
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Registration</h1>
+    <form id="registration-form">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <!-- Appointment Date -->
+      <div class="form-group">
+        <label for="appointment-date">Appointment Date</label>
+        <input type="date" id="appointment-date" name="appointment-date" required>
+      </div>
+
+      <!-- Appointment Time -->
+      <div class="form-group">
+        <label for="appointment-time">Appointment Time</label>
+        <select id="appointment-time" name="appointment-time" required>
+          <option value="" disabled selected>Select a Time Slot</option>
+          <option value="9:00 AM">9:00 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("registration-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const dob = document.getElementById("dob").value;
+      const appointmentDate = document.getElementById("appointment-date").value;
+      const appointmentTime = document.getElementById("appointment-time").value;
+
+      // Ensure all required fields are filled
+      if (!name || !email || !phone || !dob || !appointmentDate || !appointmentTime) {
+        alert("Please fill all the fields.");
+        return;
+      }
+
+      // Create the email message
+      const message = `
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone}
+        Date of Birth: ${dob}
+        Appointment Date: ${appointmentDate}
+        Appointment Time: ${appointmentTime}
+      `;
+
+      // Send the email using EmailJS
+      emailjs.send("service_lgtfz2h", "template_60p9mcj", {
+        user_name: name,
+        user_email: email,
+        user_phone: phone,
+        user_dob: dob,
+        user_appointment_date: appointmentDate,
+        user_appointment_time: appointmentTime,
+        subject: `APPOINTMENT Confirmation for ${name}`,
+      })
+        .then(function (response) {
+          console.log("Success", response);
+          alert("Registration successful! A confirmation email has been sent.");
+        }, function (error) {
+          console.log("Error", error);
+          alert("There was an error sending your email.");
+        });
+    });
+  </script>
+</body>
+
+</html>

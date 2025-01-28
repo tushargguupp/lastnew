@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENTEASE - Home</title>
+
+    <style>
+        /* Reset some default browser styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #000;
+            padding: 20px;
+            position: relative;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #d32f2f; /* Red on hover */
+        }
+
+        /* Join Us Button */
+        .join-us-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .join-us-btn:hover {
+            background-color: #9a1a1a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #000;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-mentease, .benefits, .how-to-join, .testimonial, .call-to-action {
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .about-mentease h2, .benefits h2, .how-to-join h2, .testimonial h2, .call-to-action h2 {
+            color: #d32f2f;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-mentease p, .benefits ul, .how-to-join ol, .testimonial blockquote {
+            font-size: 1.1rem;
+            color: #444;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Benefits Section */
+        .benefits ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benefits li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .benefits li strong {
+            color: #d32f2f;
+        }
+
+        /* How to Join Section */
+        .how-to-join ol {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .how-to-join li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonial Section */
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #444;
+            border-left: 4px solid #d32f2f;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Section */
+        .call-to-action a {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .call-to-action a:hover {
+            background-color: #9a1a1a;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        footer ul li a:hover {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="signup.html" class="join-us-btn">Join Us</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Mentease</h1>
+            <p>We are dedicated to empowering your mental well-being. Our mission is to provide accessible and compassionate mental health resources tailored to your unique needs. Whether it’s through facial mood analysis, AI chat support, mood journaling, or curated mental health songs, we’re here to guide you on your journey to self-care and balance.</p>
+        </section>
+
+        <section class="about-mentease">
+            <h2>Why Choose Mentease?</h2>
+            <p>Mentease is more than just a platform. It’s a movement toward holistic mental well-being. We combine advanced technology, like facial mood analysis and AI-driven mood journaling, with a deep understanding of human emotions. Our goal is to empower individuals to lead healthier, more balanced lives.</p>
+        </section>
+
+        <section class="benefits">
+            <h2>What You'll Gain</h2>
+            <ul>
+                <li><strong>Cutting-edge Tools:</strong> Access to AI-based tools for real-time mood tracking and personalized mental health resources.</li>
+                <li><strong>Supportive Community:</strong> Join a network of like-minded individuals and professionals committed to mental wellness.</li>
+                <li><strong>Exclusive Insights:</strong> Regular updates, research, and tips to maintain mental well-being.</li>
+            </ul>
+        </section>
+
+        <section class="how-to-join">
+            <h2>How to Get Started</h2>
+            <p>Joining Mentease is easy and rewarding. Follow these simple steps:</p>
+            <ol>
+                <li>Sign up for free by clicking the <a href="signup.html">Join Now</a> button.</li>
+                <li>Customize your profile and preferences for a personalized experience.</li>
+                <li>Start exploring our tools, resources, and community features.</li>
+            </ol>
+        </section>
+
+        <section class="testimonial">
+            <h2>What Our Members Say</h2>
+            <blockquote>
+                "Mentease has completely changed the way I approach my mental health. The AI tools are intuitive and the support is unparalleled." - Alex J.
+            </blockquote>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Whether you're looking to improve your own mental health or contribute to a revolutionary platform, Mentease is the right place for you.</p>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mentease. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

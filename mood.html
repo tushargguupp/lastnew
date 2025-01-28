@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Tracker</title>
+    <link rel="stylesheet" href="mood.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Tracker</h1>
+        <p>Track your mood for the week using emojis and get personalized insights.</p>
+
+        <!-- Mood Input Form -->
+        <form id="mood-form" action="graph.html" method="GET">
+            <h2>Rate Your Mood for Each Day</h2>
+            <p>Select an emoji for each day (😞 = Bad, 😀 = Good).</p>
+
+            <div class="mood-inputs">
+                <!-- Mood inputs for each day -->
+                <div>
+                    <label for="monday">Monday:</label>
+                    <input type="radio" name="monday" value="1" required>😞
+                    <input type="radio" name="monday" value="3">😔
+                    <input type="radio" name="monday" value="5">😐
+                    <input type="radio" name="monday" value="7">🙂
+                    <input type="radio" name="monday" value="10">😀
+                </div>
+
+                <div>
+                    <label for="tuesday">Tuesday:</label>
+                    <input type="radio" name="tuesday" value="1" required>😞
+                    <input type="radio" name="tuesday" value="3">😔
+                    <input type="radio" name="tuesday" value="5">😐
+                    <input type="radio" name="tuesday" value="7">🙂
+                    <input type="radio" name="tuesday" value="10">😀
+                </div>
+
+                <!-- Repeat for all days -->
+                <div>
+                    <label for="wednesday">Wednesday:</label>
+                    <input type="radio" name="wednesday" value="1" required>😞
+                    <input type="radio" name="wednesday" value="3">😔
+                    <input type="radio" name="wednesday" value="5">😐
+                    <input type="radio" name="wednesday" value="7">🙂
+                    <input type="radio" name="wednesday" value="10">😀
+                </div>
+
+                <div>
+                    <label for="thursday">Thursday:</label>
+                    <input type="radio" name="thursday" value="1" required>😞
+                    <input type="radio" name="thursday" value="3">😔
+                    <input type="radio" name="thursday" value="5">😐
+                    <input type="radio" name="thursday" value="7">🙂
+                    <input type="radio" name="thursday" value="10">😀
+                </div>
+
+                <div>
+                    <label for="friday">Friday:</label>
+                    <input type="radio" name="friday" value="1" required>😞
+                    <input type="radio" name="friday" value="3">😔
+                    <input type="radio" name="friday" value="5">😐
+                    <input type="radio" name="friday" value="7">🙂
+                    <input type="radio" name="friday" value="10">😀
+                </div>
+
+                <div>
+                    <label for="saturday">Saturday:</label>
+                    <input type="radio" name="saturday" value="1" required>😞
+                    <input type="radio" name="saturday" value="3">😔
+                    <input type="radio" name="saturday" value="5">😐
+                    <input type="radio" name="saturday" value="7">🙂
+                    <input type="radio" name="saturday" value="10">😀
+                </div>
+
+                <div>
+                    <label for="sunday">Sunday:</label>
+                    <input type="radio" name="sunday" value="1" required>😞
+                    <input type="radio" name="sunday" value="3">😔
+                    <input type="radio" name="sunday" value="5">😐
+                    <input type="radio" name="sunday" value="7">🙂
+                    <input type="radio" name="sunday" value="10">😀
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Mood Report</title>
+    <link rel="stylesheet" href="mood.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mood.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Weekly Mood Report</h1>
+        <canvas id="mood-chart"></canvas>
+        <div id="insights">
+            <h2>AI Analysis & Recommendations</h2>
+            <p>Your average mood score: <span id="average-mood"></span></p>
+            <div id="suggestions"></div>
+        </div>
+    </div>
+</body>
+</html>

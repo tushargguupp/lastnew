@@ -1,0 +1,109 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #20b2aa, #2e8b57); /* Sea green gradient */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding-top: 50px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #2e8b57; /* Sea green */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2e8b57;
+}
+
+/* Form and Inputs */
+.mood-inputs {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.mood-inputs div {
+    margin-bottom: 15px;
+}
+
+.mood-inputs label {
+    font-size: 1.2em;
+    color: #333;
+    margin-right: 10px;
+}
+
+.mood-inputs input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.5);
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #2e8b57; /* Sea green */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #20b2aa; /* Lighter sea green on hover */
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .mood-inputs div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Optional: Card Component for Extra Structure */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
